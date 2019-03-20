@@ -5,6 +5,6 @@ jobs:
       - image: circleci/node
     steps:
       - checkout
-      - run: npm i
-      - run: npm i eslint eslint-config-google
-      - run: npx eslint .
+      - run: cd bulletin-board && npm i
+      - run: cd bulletin-board && npm i eslint eslint-config-google
+      - run: cd bulletin-board && npx eslint -c ../.eslintrc.json .
